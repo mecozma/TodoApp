@@ -18,7 +18,13 @@ $(document).ready(function() {
             // collecting the new todo from the input
             var newTodoValue = $('input').val();
             $(this).val("");
-            $('ul').append('<li><span>X</span>' + newTodoValue + '</li>')
+            $('ul').append('<li><span><i class="fas fa-trash-alt"></i></span>' + newTodoValue + '</li>')
         }
     });
+
+    // Toggle the input
+    $('.fa-plus').on('click', function() {
+        $("input[type='text']").fadeToggle();
+    });
+   
 });
